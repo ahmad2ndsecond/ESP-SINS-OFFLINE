@@ -1,11 +1,5 @@
-
--- ============================================================================
--- THIS LUA IS ENCRYPTED BY @TG--@ZenXAHMAD
--- YOU CAN JOIN MY CHANNEL :- TG--@ZenXAHMAD
--- ============================================================================
-
--- ============================================================================
--- TG--@ZenXAHMAD VIP MOD MENU 4.6 (CLEAN ONLINE ENGINE)
+*-- ============================================================================
+-- SECUREX VIP MOD MENU 4.6 (CLEAN ONLINE ENGINE)
 -- Ultra High Performance | 110+ FPS Stable | Zero Bloat
 -- Features: Native Wallhack, Head HP Bar (Wall-Penetrating), Box ESP,
 --           MiniMap ESP, Aim Assist, No Recoil, iPad View, Mod Skin
@@ -516,7 +510,7 @@ local function Notify(msg)
 end
 
 -- ============================================================================
--- LEXUS CONFIGURATION & ROBUST PERSISTENCE DEFAULTS ASSETFINDER
+-- LEXUS CONFIGURATION & ROBUST PERSISTENCE DEFAULTS
 -- ============================================================================
 local DEFAULT_LEXUS_CONFIG = { 
     TargetFPS = 165,
@@ -1175,7 +1169,7 @@ end
 -- ============================================================================
 -- BULLETPROOF SETTINGS PERSISTENCE ENGINE (INSTANT AUTO-SAVE & ZERO RESET)
 -- ============================================================================
-local ConfigFileName = "TG--@ZenXAHMAD_settings.txt"
+local ConfigFileName = "securex_settings.txt"
 _G.LastConfigSaveStr = ""
 _G._CachedConfigSavePath = nil
 
@@ -1347,7 +1341,7 @@ _G.LoadModSettings = function()
             end
         end
         if not content or #content <= 5 then
-            local oldPaths = GetConfigPaths("TG--@ZenXAHMAD_settings.txt")
+            local oldPaths = GetConfigPaths("ZenXAHMAD_settings.txt")
             for _, path in ipairs(oldPaths) do
                 local file = io.open(path, "r")
                 if file then
@@ -4792,7 +4786,7 @@ function SnaplineESP.UpdateCanvasTransform(PC)
             end
         end)
     end
---BY OFFI CIAL_NADEEM89 6211
+
     if not success then
         local scale = 1.0
         local WLL = _ci_WLL
@@ -5021,8 +5015,7 @@ function SnaplineESP.UpdateSnapLine(KeyStr, CanvasPos, bOnScreen, fromX, fromY, 
         SnaplineESP.SnapLineWidgets[KeyStr] = LineData
         bIsNew = true
     end
-    
---THIS LUA FUCKED BY OFFI CIAL_NADEEM8 96211
+
     local Widget = LineData.Widget
     local Slot = LineData.Slot
 
@@ -5172,7 +5165,7 @@ _G._SnaplineLoopRunning = false
 _G._snaplineTimerStarted = false
 _G._snaplineTimerHandle = nil
 _G._snaplineTimerOwner = nil
---THIS LUA FUCKED BY OFFIC IAL_NADE EM89 6211
+
 local function StartSnaplineLoop(passedOwner)
     -- If timer owner is dead or detached, clean it first
     if _G._snaplineTimerStarted and _G._snaplineTimerOwner and not Valid(_G._snaplineTimerOwner) then
@@ -5396,7 +5389,6 @@ local function ApplyFPSStabilizer(enable)
             ExecCmd("r.WaterReflection", "1")
             ExecCmd("r.SSR.Quality", "1")
         end
-        --THIS LUA FUCKED BY TG--@ZenXAHMAD
     end)
     _G.LexusState.DirtyConfig = true
 end
@@ -5530,7 +5522,7 @@ function _G.InitModMenuTab()
         LocUtil = require("client.common.LocUtil")
     end
     local FakeTextMap = {
-        [999000] = "ULTIMATE VIP MENU",
+        [999000] = "Hack VIP MENU",
         [999001] = "Visuals & ESP",
         [999005] = "Vehicle & Loot",
         [999002] = "Combat & Aim",
@@ -5585,7 +5577,7 @@ function _G.InitModMenuTab()
         if _G.SaveModSettings then pcall(_G.SaveModSettings) end
         return true
     end
---THIS LUA FUCKED BY TG--@ZenXAHMAD
+
     local colNames = {"Red", "Cyan", "Yellow", "Green", "Purple", "White"}
     local colVals = {0, 1, 2, 3, 4, 5}
 
@@ -5655,10 +5647,6 @@ function _G.InitModMenuTab()
               )
           end 
         },
-        -- ============================================================================
--- THIS LUA IS ENCRYPTED BY @TG--@ZenXAHMAD
--- ============================================================================
-
         { Key = "ModMenu_WH_GlowIntensity", UI = AliasMap.Slider, Text = "   Glow Intensity (10%-100%)", ExpandHandle = "ModMenu_WallHack", Min = 10, Max = 100, MinValue = 10, MaxValue = 100,
           GetFunc = function() return tonumber(_G.LexusConfig.GlowIntensity) or 60 end,
           SetFunc = function(c, v)
@@ -5920,12 +5908,6 @@ function _G.InitModMenuTab()
               return true 
           end 
         },
-        
-        -- ============================================================================
--- THIS LUA IS ENCRYPTED BY @OFFICIAL_ NADEEM896211
--- YOU CAN JOIN MY CHANNEL :- ASSET _FINDER
--- ============================================================================
-
 
         -- ==================== 2. ANTI-BAN SMART FILTERS ====================
         { UI = AliasMap.Title, Text = "--- ANTI-BAN SMART FILTERS ---" },
@@ -6026,10 +6008,6 @@ function _G.InitModMenuTab()
           end
         },
     }
--- ============================================================================
--- THIS LUA IS ENCRYPTED BY @OFFICIAL_ NADEEM896211
--- YOU CAN JOIN MY CHANNEL :- ASSET_ FINDER
--- ============================================================================
 
     local fpsNames = {"60 FPS", "90 FPS", "120 FPS", "144 FPS", "165 FPS (Ultra)"}
     local fpsVals = {60, 90, 120, 144, 165}
@@ -6183,11 +6161,6 @@ function _G.InitModMenuTab()
             table.insert(SettingCatalog, 1, SettingPageDefine.ModMenu)
         end
     end
--- ============================================================================
--- THIS LUA IS ENCRYPTED BY @TG--@ZenXAHMAD
--- YOU CAN JOIN MY CHANNEL :- TG--@ZenXAHMAD
--- ============================================================================
-
 
     -- UIMANAGER HOOK
     local UIManager = _G.UIManager
@@ -6400,11 +6373,6 @@ local function MainLoop()
         end
         _G.TDSkinLoopStarted = false
     end
--- ============================================================================
--- THIS LUA IS ENCRYPTED BY @TG--@ZenXAHMAD
--- YOU CAN JOIN MY CHANNEL :- TG--@ZenXAHMAD
--- ============================================================================
-
 
     -- ==================== WATCHDOGS & WEAPON SWAP CHECK ====================
     -- Check if held weapon changed using stable weapon ID/unique key (ZERO GC LAG)
@@ -6532,7 +6500,3 @@ end
 FastTick() 
 
 return true
--- ============================================================================
--- THIS LUA IS ENCRYPTED BY @TG--@ZenXAHMAD
--- YOU CAN JOIN MY CHANNEL :- TG--@ZenXAHMAD
--- ============================================================================
